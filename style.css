@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #484acc;
+}
+
+:where(.config-container, .quiz-container, .result-container) {
+  background-color: white;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1.5px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+}
+
+.config-container {
+  width: 415px;
+  padding: 25px;
+  text-align: center;
+}
+
+.config-title {
+  font-size: 1.31rem;
+}
+
+.config-option {
+  margin-top: 25px;
+}
+
+.option-title {
+  font-size: 1.125rem;
+  font-weight: 500px;
+  margin-bottom: 20px;
+}
+
+.category-options {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.category-option-button {
+  padding: 12px;
+  font-size: 0.938rem;
+  font-weight: 550;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid black;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 5px;
+  transition: 0.5s;
+}
+
+.category-option-button:hover {
+  background-color: #484acc;
+  color: white;
+  border-color: white;
+}
+
+.category-option-button:active {
+  background-color: white;
+  color: black;
+}
+
+.category-option-button.selected {
+  background-color: #2a2d99;
+  color: white;
+  border-color: white;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.question-option-button {
+  margin-right: 5px;
+  width: 50px;
+  height: 35px;
+  font-size: 0.938rem;
+  font-weight: 550;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: 0.3s;
+}
+
+.question-option-button:hover {
+  background-color: #484acc;
+  color: white;
+  border-color: white;
+}
+
+.question-option-button:active {
+  background-color: white;
+  color: black;
+}
+
+.question-option-button.selected {
+  background-color: #2a2d99;
+  color: white;
+  border-color: white;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+.start-quiz-button {
+  margin-top: 15px;
+  padding: 12px;
+  font-size: 0.938rem;
+  font-weight: 550;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: 0.3s;
+}
+
+.start-quiz-button:hover {
+  background-color: #484acc;
+  color: white;
+  border-color: white;
+}
+
+.start-quiz-button:active {
+  background-color: white;
+  color: black;
+}
+
+.quiz-container {
+  width: 550px;
+  padding: 30px;
+}
+
+.quiz-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.quiz-timer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.quiz-content {
+  padding: 25px 0;
+}
+
+.quiz-question {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.answer-options {
+  list-style-type: none;
+}
+
+.answer-option span {
+  display: block;
+  flex-shrink: 0;
+  margin: -4px -3px -4px 12px;
+}
+
+.answer-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.answer-option:hover {
+  background-color: #f0f0f0;
+}
+
+.answer-option.correct {
+  border-color: black;
+  background: rgb(86, 153, 86);
+  color: white;
+}
+
+.answer-option.incorrect {
+  border-color: black;
+  background: red;
+  color: white;
+}
+
+.quiz-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.next-question-button {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  font-size: 0.938rem;
+  font-weight: 550;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: 0.3s;
+}
+
+.next-question-button:hover {
+  background-color: #f0f0f0;
+  color: black;
+  border-color: black;
+}
+
+.result-gif {
+  width: 150px;
+  height: auto;
+}
+
+.result-container {
+  display: block;
+  text-align: center;
+  padding: 40px;
+  width: 400px;
+}
+
+.result-title {
+  margin-top: 30px;
+}
+
+.result-message {
+  font-size: 1.125rem;
+  margin-top: 15px;
+}
+
+.try-again-button {
+  margin-top: 10px;
+  width: 90px;
+  height: 40px;
+  font-size: 0.938rem;
+  font-weight: 550;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: 0.3s;
+}
+
+.try-again-button:hover {
+  background-color: #484acc;
+  color: white;
+  border-color: white;
+}
+
+.try-again-button:active {
+  background-color: white;
+  color: black;
+}
